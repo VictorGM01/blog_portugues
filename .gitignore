@@ -6,6 +6,12 @@ __pycache__/
 # C extensions
 *.so
 
+# Pasta da IDE
+.idea
+
+# Variável de Ambiente
+settings.ini
+
 # Distribution / packaging
 .Python
 build/
