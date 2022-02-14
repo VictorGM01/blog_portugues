@@ -1,2 +1,2 @@
-# blog_portugues
-Blog feito no django para atividade de Português do IFSP
+# Blog para Divulgação e Publicação de Conteúdos Relacionados à Lingua Portuguesa 
+O blog está sendo criado com o intuito de servir como fonte de conteúdos relacionados à matéria de Lingua Portuguesa, do 3° ano do ensino médio/técnico do IFSP, de modo a ajudar pessoas que não têm acesso a esses conteúdos. A atividade solicitava uma página no Instagram, todavia, decidimos criar um blog e disponibilizá-lo publicamente através de um link.
