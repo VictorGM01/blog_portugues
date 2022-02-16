@@ -9,6 +9,11 @@ __pycache__/
 # Pasta da IDE
 .idea
 
+# Media
+media/
+./media
+imagens/
+
 # Variável de Ambiente
 settings.ini
 

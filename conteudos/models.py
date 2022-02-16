@@ -8,3 +8,4 @@ class Post(models.Model):
     conteudo = models.CharField(max_length=1000)
     mapa_mental = models.ImageField(upload_to='imagens/%d/%m')
     data_postagem = models.DateField(default=datetime.today)
+    principal = models.BooleanField(default=False)
