@@ -50,3 +50,13 @@ def resumos(request):
     }
 
     return render(request, 'conteudos/resumos.html', contexto)
+
+
+def resumos_e_mapas(request):
+    todos = Post.objects.all()
+
+    contexto = {
+        'todos': todos
+    }
+
+    return render(request, 'conteudos/resumos_e_mapas.html', contexto)
