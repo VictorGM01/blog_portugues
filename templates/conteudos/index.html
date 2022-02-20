@@ -18,10 +18,10 @@
                                 <h3 class="mb-0">{{ principal.titulo }}</h3>
                                 <div class="mb-1 text-muted">{{ principal.data_postagem }}</div>
                                     <p class="card-text mb-auto">{{ principal.legenda }}</p>
-                                    <a href="#" class="stretched-link">Continuar lendo...</a>
+                                    <a href="{% url 'detalhar-post' principal.id %}" class="stretched-link">Continuar lendo...</a>
                                 </div>
                             <div class="col-auto d-none d-lg-block">
-                                <img alt="{{ principal.titulo }}" src="{{ principal.mapa_mental.url }}">
+                                <img alt="{{ principal.titulo }}" src="{{ principal.mapa_mental.url }}" height="189">
                             </div>
                         </div>
                     </div>
@@ -38,7 +38,7 @@
                                 <h3 class="mb-0">{{ principal.titulo }}</h3>
                                 <div class="mb-1 text-muted">{{ principal.data_postagem }}</div>
                                     <p class="card-text mb-auto">{{ principal.legenda }}</p>
-                                    <a href="#" class="stretched-link">Continuar lendo...</a>
+                                    <a href="{% url 'detalhar-post' principal.id %}" class="stretched-link">Continuar lendo...</a>
                                 </div>
                             <div class="col-auto d-none d-lg-block">
                                 <img alt="{{ principal.titulo }}" src="{{ principal.mapa_mental.url }}" height="189">
@@ -60,7 +60,10 @@
             <p class="blog-post-meta">{{ post.data_postagem }} por <a href="#">Anna, Raphaela e Victor</a></p>
             <hr>
             <img class="img-fluid" alt="mapa mental sobre {{ post.titulo }}" src="{{ post.mapa_mental.url }}">
-            <p>{{ post.legenda }}</p>
+            <p style="margin-top: 1rem">{{ post.legenda }}</p>
+            <a href="{% url 'detalhar-post' post.id %}">
+                <h6>Ler mais...</h6>
+            </a>
             <hr>
         </div><!-- /.blog-post -->
         {% endfor %}
