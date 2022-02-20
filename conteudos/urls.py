@@ -5,5 +5,6 @@ from . import views
 
 
 urlpatterns = [
-    path('', views.index, name='index')
+    path('', views.index, name='index'),
+    path('post/<int:id_post>/detalhar', views.detalhar, name='detalhar-post')
 ] + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)

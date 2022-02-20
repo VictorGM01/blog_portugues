@@ -1,4 +1,4 @@
-from django.shortcuts import render
+from django.shortcuts import render, get_object_or_404
 from .models import Post
 from django.core.paginator import Paginator
 
@@ -20,3 +20,13 @@ def index(request):
         'favs': outros_favs
     }
     return render(request, 'conteudos/index.html', contexto)
+
+
+def detalhar(request, id_post):
+    post = get_object_or_404(Post, pk=id_post)
+
+    contexto = {
+        'post': post
+    }
+
+    return render(request, 'conteudos/post.html', contexto)
