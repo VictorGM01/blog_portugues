@@ -40,3 +40,13 @@ def mapas_mentais(request):
     }
 
     return render(request, 'conteudos/mapas_mentais.html', contexto)
+
+
+def resumos(request):
+    resumo = Post.objects.all()
+
+    contexto = {
+        'resumos': resumo
+    }
+
+    return render(request, 'conteudos/resumos.html', contexto)
