@@ -143,6 +143,8 @@ MEDIA_URL = '/media/'
 
 DEFAULT_FILE_STORAGE = 'cloudinary_storage.storage.MediaCloudinaryStorage'
 
+django_heroku.settings(locals())
+
 CLOUDINARY_STORAGE = {
     'CLOUD_NAME': 'conteudos-de-portugues',
     'API_KEY': config('API_KEY', default=""),
