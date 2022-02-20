@@ -9,6 +9,10 @@ __pycache__/
 # Pasta da IDE
 .idea
 
+# statcfiles
+./staticfiles
+staticfiles/
+
 # Media
 media/
 ./media
