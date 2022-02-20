@@ -1,14 +1,20 @@
 from django.shortcuts import render, get_object_or_404
 from .models import Post
 from django.core.paginator import Paginator
+from django.db.models import Q
 
 
 def index(request):
     principais = Post.objects.filter(principal=True)[:2]
     outros_favs = Post.objects.filter(principal=True)[2:]
     posts = Post.objects.all().order_by('data_postagem')
+    tema = request.GET.get('tema')
 
-    paginator = Paginator(posts, 1)
+    if tema:
+        posts_pesquisa = Post.objects.filter(Q(titulo__icontains=tema) | Q(legenda__icontains=tema))
+        return render(request, 'conteudos/resumos_e_mapas.html', {'todos': posts_pesquisa})
+
+    paginator = Paginator(posts, 2)
 
     pagina = request.GET.get('page')
 
