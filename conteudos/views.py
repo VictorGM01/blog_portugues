@@ -30,3 +30,13 @@ def detalhar(request, id_post):
     }
 
     return render(request, 'conteudos/post.html', contexto)
+
+
+def mapas_mentais(request):
+    mapas = Post.objects.all()
+
+    contexto = {
+        'mapas': mapas
+    }
+
+    return render(request, 'conteudos/mapas_mentais.html', contexto)

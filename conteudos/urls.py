@@ -6,5 +6,6 @@ from . import views
 
 urlpatterns = [
     path('', views.index, name='index'),
-    path('post/<int:id_post>/detalhar', views.detalhar, name='detalhar-post')
+    path('post/<int:id_post>/detalhar', views.detalhar, name='detalhar-post'),
+    path('mapas_mentais', views.mapas_mentais, name='mapas-mentais')
 ] + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
