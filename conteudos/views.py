@@ -66,3 +66,7 @@ def resumos_e_mapas(request):
     }
 
     return render(request, 'conteudos/resumos_e_mapas.html', contexto)
+
+
+def criadores(request):
+    return render(request, 'conteudos/criadores.html')

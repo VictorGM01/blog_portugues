@@ -57,7 +57,7 @@
         {% for post in posts %}
         <div class="blog-post">
             <h2 class="blog-post-title">{{ post.titulo }}</h2>
-            <p class="blog-post-meta">{{ post.data_postagem }} por <a href="#">Anna, Raphaela e Victor</a></p>
+            <p class="blog-post-meta">{{ post.data_postagem }} por <a href="{% url 'criadores' %}">Anna, Raphaela e Victor</a></p>
             <hr>
             <img class="img-fluid" alt="mapa mental sobre {{ post.titulo }}" src="{{ post.mapa_mental.url }}">
             <p style="margin-top: 1rem">{{ post.legenda }}</p>
