@@ -40,6 +40,11 @@ def detalhar(request, id_post):
 
 def mapas_mentais(request):
     mapas = Post.objects.all()
+    tema = request.GET.get('tema')
+
+    if tema:
+        posts_pesquisa = Post.objects.filter(Q(titulo__icontains=tema) | Q(legenda__icontains=tema))
+        return render(request, 'conteudos/mapas_mentais.html', {'mapas': posts_pesquisa})
 
     contexto = {
         'mapas': mapas
@@ -50,6 +55,11 @@ def mapas_mentais(request):
 
 def resumos(request):
     resumo = Post.objects.all()
+    tema = request.GET.get('tema')
+
+    if tema:
+        posts_pesquisa = Post.objects.filter(Q(titulo__icontains=tema) | Q(legenda__icontains=tema))
+        return render(request, 'conteudos/resumos.html', {'resumos': posts_pesquisa})
 
     contexto = {
         'resumos': resumo
@@ -60,6 +70,11 @@ def resumos(request):
 
 def resumos_e_mapas(request):
     todos = Post.objects.all()
+    tema = request.GET.get('tema')
+
+    if tema:
+        posts_pesquisa = Post.objects.filter(Q(titulo__icontains=tema) | Q(legenda__icontains=tema))
+        return render(request, 'conteudos/resumos_e_mapas.html', {'todos': posts_pesquisa})
 
     contexto = {
         'todos': todos
