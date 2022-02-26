@@ -1,3 +1,33 @@
 {% extends 'base.html' %}
 {% block main %}
+
+    <div style="margin-bottom: 4rem" class="jumbotron p-4 p-md-5 text-white rounded bg-dark">
+            <div class="col-md-6 px-0">
+                <h2 class="font-italic">Autores</h2>
+            </div>
+    </div>
+
+    <div class="row" style="margin-bottom: 4rem">
+          <div class="col-lg-4 text-center" style="margin-bottom: 1rem">
+              <img alt="foto de perfil Anna Beatriz" class="bd-placeholder-img rounded-circle" width="140" height="140" src="https://res.cloudinary.com/conteudos-de-portugues/image/upload/ar_1:1,b_rgb:262c35,bo_0px_solid_rgb:ffffff,c_fill,g_auto,o_100,q_100,r_max,w_1000/v1645891933/anna.png">
+              <h2 style="margin-top: 1rem">Anna Beatriz</h2>
+              <p>Responsável pela escrita dos <a class="text-success" href="{% url 'resumos' %}">resumos</a> e pela revisão dos conteúdos.</p>
+              <a href="https://www.linkedin.com/in/anna-beatriz-3b32921aa/" target="_blank" class="badge badge-primary">Linkedin</a>
+          </div>
+
+          <div class="col-lg-4 text-center" style="margin-bottom: 1rem">
+              <img alt="foto de perfil Raphaela Ferraz" class="bd-placeholder-img rounded-circle" width="140" height="140" src="https://avatars.githubusercontent.com/u/86068799?v=4">
+              <h2 style="margin-top: 1rem">Raphaela Guiland</h2>
+              <p>Responsável pela escrita dos <a class="text-success" href="{% url 'resumos' %}">resumos</a> e pela criação dos <a class="text-primary" href="{% url 'mapas-mentais' %}">mapas mentais</a>.</p>
+              <a href="https://www.linkedin.com/in/raphaela-guiland-ferraz-32a980214/" target="_blank" class="badge badge-primary">Linkedin</a>
+          </div>
+
+          <div class="col-lg-4 text-center" style="margin-bottom: 1rem">
+              <img alt="foto de perfil Victor Gabriel" class="bd-placeholder-img rounded-circle" width="140" height="140" src="https://avatars.githubusercontent.com/u/86068797?s=400&u=db06fd86526ded655afce44a902cbde4c1f87538&v=4">
+              <h2 style="margin-top: 1rem">Victor Marques</h2>
+              <p>Responsável pela escrita dos <a class="text-success" href="{% url 'resumos' %}">resumos</a> e pela parte técnica do projeto (<a class="text-primary" href="{% url 'index' %}">site</a>, servidor, etc).</p>
+              <a href="https://www.linkedin.com/in/victor-marques-profile/" target="_blank" class="badge badge-primary">Linkedin</a>
+          </div>
+    </div>
+
 {% endblock %}
