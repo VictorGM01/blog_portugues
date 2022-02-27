@@ -17,11 +17,10 @@
                                 <strong class="d-inline-block mb-2 text-success">Favorito</strong>
                                 <h3 class="mb-0">{{ principal.titulo }}</h3>
                                 <div class="mb-1 text-muted">{{ principal.data_postagem }}</div>
-                                    <p class="card-text mb-auto">{{ principal.legenda }}</p>
-                                    <a href="{% url 'detalhar-post' principal.id %}" class="stretched-link">Continuar lendo...</a>
+                                    <a href="{% url 'detalhar-post' principal.id %}" class="stretched-link">Ler mais...</a>
                                 </div>
                             <div class="col-auto d-none d-lg-block">
-                                <img alt="{{ principal.titulo }}" src="{{ principal.mapa_mental.url }}" width="267" height="189">
+                                <img alt="Mapa mental sobre {{ principal.titulo }}" src="{{ principal.mapa_mental.url }}" width="267" height="189">
                             </div>
                         </div>
                     </div>
@@ -37,11 +36,10 @@
                                 <strong class="d-inline-block mb-2 text-success">Favorito</strong>
                                 <h3 class="mb-0">{{ principal.titulo }}</h3>
                                 <div class="mb-1 text-muted">{{ principal.data_postagem }}</div>
-                                    <p class="card-text mb-auto">{{ principal.legenda }}</p>
-                                    <a href="{% url 'detalhar-post' principal.id %}" class="stretched-link">Continuar lendo...</a>
+                                    <a href="{% url 'detalhar-post' principal.id %}" class="stretched-link">ler mais...</a>
                                 </div>
                             <div class="col-auto d-none d-lg-block">
-                                <img alt="{{ principal.titulo }}" src="{{ principal.mapa_mental.url }}" width="267" height="189">
+                                <img alt="Mapa mental sobre {{ principal.titulo }}" src="{{ principal.mapa_mental.url }}" width="267" height="189">
                             </div>
                         </div>
                     </div>
