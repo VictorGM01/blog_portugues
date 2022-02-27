@@ -7,7 +7,7 @@ from django.db.models import Q
 def index(request):
     principais = Post.objects.filter(principal=True)[:2]
     outros_favs = Post.objects.filter(principal=True)[2:]
-    posts = Post.objects.all().order_by('data_postagem')
+    posts = Post.objects.all().order_by('-data_postagem')
     tema = request.GET.get('tema')
 
     if tema:
