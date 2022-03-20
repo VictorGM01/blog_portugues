@@ -14,7 +14,7 @@
                     <div class="col-md-6">
                         <div class="row no-gutters border rounded overflow-hidden flex-md-row mb-4 shadow-sm h-md-250 position-relative">
                             <div class="col p-2 d-flex flex-column position-static">
-                                <strong class="d-inline-block mb-2 text-success">Favorito</strong>
+                                <strong style="color: #FF6AC5" class="d-inline-block mb-2">Favorito</strong>
                                 <h3 class="mb-0">{{ principal.titulo }}</h3>
                                 <div class="mb-1 text-muted">{{ principal.data_postagem }}</div>
                                     <a href="{% url 'detalhar-post' principal.id %}" class="stretched-link">Ler mais...</a>
@@ -33,7 +33,7 @@
                     <div class="col-md-6">
                         <div class="row no-gutters border rounded overflow-hidden flex-md-row mb-4 shadow-sm h-md-250 position-relative">
                             <div class="col p-2 d-flex flex-column position-static">
-                                <strong class="d-inline-block mb-2 text-success">Favorito</strong>
+                                <strong style="color: #FF6AC5" class="d-inline-block mb-2">Favorito</strong>
                                 <h3 class="mb-0">{{ principal.titulo }}</h3>
                                 <div class="mb-1 text-muted">{{ principal.data_postagem }}</div>
                                     <a href="{% url 'detalhar-post' principal.id %}" class="stretched-link">ler mais...</a>
@@ -55,7 +55,7 @@
         {% for post in posts %}
         <div class="blog-post">
             <h2 class="blog-post-title">{{ post.titulo }}</h2>
-            <p class="blog-post-meta">{{ post.data_postagem }} por <a href="{% url 'criadores' %}">Anna, Raphaela e Victor</a></p>
+            <p class="blog-post-meta">{{ post.data_postagem }} por <a style="color: #07999F" href="{% url 'criadores' %}">Anna, Raphaela e Victor</a></p>
             <hr>
             <img class="img-fluid" alt="mapa mental sobre {{ post.titulo }}" src="{{ post.mapa_mental.url }}">
             <p style="margin-top: 1rem">{{ post.legenda }}</p>
